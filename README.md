@@ -1,35 +1,30 @@
 # Robotic Behavior Cloning
 
-Behavioral cloning model to predict actuator commands from visual observations.
+## Objective
+Learn an action policy from demonstrations to predict actuator commands from visual observations.
 
-## Problem
-Learn action policies from demonstrations for robotic control.
+## Method
+- Supervised imitation-learning setup on image-action pairs.
+- Training and evaluation with prediction-error analysis.
+- Failure-case inspection for robustness.
 
-## Approach
-Supervised learning on image-action pairs with sequence-aware modeling.
+## Repository Structure
+- `notebooks/` experiment workflows.
+- `src/` reusable code modules.
+- `results/` metrics and plots.
+- `assets/` README figures.
+- `models/` saved models (optional).
+- `data/` local dataset directory (not versioned).
 
-## Highlights
-- Imitation learning pipeline
-- Training and evaluation workflow
-- Failure-mode analysis and generalization notes
+## Data Access
+Use local robotics demonstration data under `data/`.
 
-## Data
-Robotics dataset (not bundled). Place under `data/`.
+## Run
+1. Put dataset files under `data/`.
+2. Run `notebooks/behavior_cloning.ipynb`.
+3. Save final plots and summaries to `results/`.
 
-## Project Structure
-- notebooks/ - Main workflow notebooks
-- data/ - Datasets (as noted above)
-- models/ - Model checkpoints (optional)
-- results/ - Metrics, plots, and outputs
-- assets/ - Figures for README
-
-## How to Run
-- Place dataset under `data/`
-- Run `notebooks/behavior_cloning.ipynb`
-
-## Status
-Notebook is ready for rerun; update dataset paths.
-
-## Results Showcase
-- Recommended outputs in `results/`: training/validation loss curves, control prediction error plots, and failure-case snapshots.
-- Add final figures to `assets/` and link them in this section after reruns.
+## Result Artifacts
+- Training/validation loss curves
+- Control prediction error plots
+- Failure-case examples
